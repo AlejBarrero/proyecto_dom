@@ -230,13 +230,19 @@ divPrecio.appendChild(pPrecio);
 pPrecio.className = "pPrecio";
 let barraPrecio = document.createElement("input");
 barraPrecio.type = "range";
+barraPrecio.className = "barraPrecio";
 divPrecio.appendChild(barraPrecio);
 
 let divOrdenadores = document.createElement("div");
 divOrdenadores.className = "divOrdenadores";
-divOrdenadores.innerHTML = "Ordenadores";
+
+let pOrdenadores = document.createElement("p");
+pOrdenadores.innerHTML = "Ordenadores";
+pOrdenadores.className = "pOrdenadores";
+divOrdenadores.appendChild(pOrdenadores);
 
 let divPortatiles = document.createElement("div");
+divPortatiles.className = "filtro";
 
 let checkPortatiles = document.createElement("input");
 checkPortatiles.type = "checkbox";
@@ -252,6 +258,7 @@ divPortatiles.appendChild(pPortatiles);
 divOrdenadores.appendChild(divPortatiles);
 
 let divSobremesa = document.createElement("div");
+divSobremesa.className = "filtro";
 
 let checkSobremesa = document.createElement("input");
 checkSobremesa.type = "checkbox";
@@ -275,6 +282,7 @@ pComponentes.className = "pComponentes";
 divComponentes.appendChild(pComponentes);
 
 let divTarjetasGraficas = document.createElement("div");
+divTarjetasGraficas.className = "filtro";
 
 let checkTarjetasGraficas = document.createElement("input");
 checkTarjetasGraficas.type = "checkbox";
@@ -290,6 +298,7 @@ divTarjetasGraficas.appendChild(pTarjetasGraficas);
 divComponentes.appendChild(divTarjetasGraficas);
 
 let divDiscosDuros = document.createElement("div");
+divDiscosDuros.className = "filtro";
 
 let checkDiscosDuros = document.createElement("input");
 checkDiscosDuros.type = "checkbox";
@@ -305,6 +314,7 @@ divDiscosDuros.appendChild(pDiscosDuros);
 divComponentes.appendChild(divDiscosDuros);
 
 let divPlacasBase = document.createElement("div");
+divPlacasBase.className = "filtro";
 
 let checkPlacasBase = document.createElement("input");
 checkPlacasBase.type = "checkbox";
@@ -320,6 +330,7 @@ divPlacasBase.appendChild(pPlacasBase);
 divComponentes.appendChild(divPlacasBase);
 
 let divProcesadores = document.createElement("div");
+divProcesadores.className = "filtro";
 
 let checkProcesadores = document.createElement("input");
 checkProcesadores.type = "checkbox";
@@ -343,6 +354,7 @@ pPerifericos.className = "pPerifericos";
 divPerifericos.appendChild(pPerifericos);
 
 let divMonitores = document.createElement("div");
+divMonitores.className = "filtro";
 
 let checkMonitores = document.createElement("input");
 checkMonitores.type = "checkbox";
@@ -358,6 +370,7 @@ divMonitores.appendChild(pMonitores);
 divPerifericos.appendChild(divMonitores);
 
 let divTeclados = document.createElement("div");
+divTeclados.className = "filtro";
 
 let checkTeclados = document.createElement("input");
 checkTeclados.type = "checkbox";
@@ -373,6 +386,7 @@ divTeclados.appendChild(pTeclados);
 divPerifericos.appendChild(divTeclados);
 
 let divMultifunciones = document.createElement("div");
+divMultifunciones.className = "filtro";
 
 let checkMultifunciones = document.createElement("input");
 checkMultifunciones.type = "checkbox";
@@ -388,6 +402,7 @@ divMultifunciones.appendChild(pMultifunciones);
 divPerifericos.appendChild(divMultifunciones);
 
 let divMemoriasUSB = document.createElement("div");
+divMemoriasUSB.className = "filtro";
 
 let checkMemoriasUSB = document.createElement("input");
 checkMemoriasUSB.type = "checkbox";
@@ -403,6 +418,7 @@ divMemoriasUSB.appendChild(pMemoriasUSB);
 divPerifericos.appendChild(divMemoriasUSB);
 
 let divVideoconferencia = document.createElement("div");
+divVideoconferencia.className = "filtro";
 
 let checkVideoconferencia = document.createElement("input");
 checkVideoconferencia.type = "checkbox";
