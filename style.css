@@ -1,0 +1,217 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --naranja: #ffa500;
+    --color-borde: #3333334c;
+    --oferta: #bf0019;
+    --precio-original: #737373;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--blanco);
+    font-size: 14px;
+}
+
+body {
+    font-family: "Open Sans", open-sans, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    max-height: 20px;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.imagenLogo {
+    height: 80px;
+    width: auto;
+}
+
+.nombre {
+    color: var(--naranja);
+    font-weight: bolder;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.busqueda {
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    margin-left: 30px;
+    padding-left: 10px;
+    height: 40px;
+    width: 600px;
+}
+
+.cuenta {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--negro);
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+.imagenCuenta {
+    height: 24px;
+    width: auto;
+    padding-right: 5px;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--negro);
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+.imagenCarrito {
+    height: 24px;
+    width: auto;
+    padding-right: 5px;
+}
+
+.acceso-directo {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+    padding-right: 12rem;
+    grid-area: acceso-directo;
+}
+
+.acceso-directo p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.acceso-directo p:last-child {
+    color: var(--naranja);
+    font-weight: bold;
+}
+
+.ofertas {
+    border-top: 1px solid var(--color-borde);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    grid-area: ofertas;
+}
+
+.ofertas p {
+    padding-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.listaProductos {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+    grid-area: listaProductos;
+}
+
+.listaProductos figure {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.582);
+    transition: box-shadow 0.3s ease;
+}
+
+.listaProductos figure:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.582);
+}
+
+.listaProductos figure img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.listaProductos figure figcaption {
+    text-align: center;
+}
+
+.precioProducto {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--oferta);
+}
+
+.filtros {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    grid-area: filtros;
+}
+
+.pBuscar:hover,
+.pPrecio:hover,
+.divOrdenadores:hover,
+.divComponentes:hover,
+.divPerifericos:hover,
+.divVarios > p:hover {
+    background-color: var(--color-borde);
+}
+
+.pBuscar {
+    font-weight: bold;
+}
+
+.buscarFiltro {
+    border: 1px solid var(--color-borde);
+    border-radius: 2px;
+}
+
+.pPrecio {
+    font-weight: bold;
+}
+
+.pComponentes {
+    font-weight: bold;
+}
+
+.pPerifericos {
+    font-weight: bold;
+}
+
+.divVarios p {
+    font-weight: bold;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: 
+        "acceso-directo acceso-directo"
+        "ofertas ofertas"
+        "filtros listaProductos";
+    grid-template-columns: 300px 1fr;
+    gap: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
