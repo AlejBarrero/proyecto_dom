@@ -21,8 +21,8 @@ body {
 }
 
 header {
-    height: auto;
-    width: 100vw;
+    max-height: 20px;
+    max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,15 +111,17 @@ header {
     grid-area: ofertas;
 }
 
-.ofertas img {
-    width: 100%;
-    height: auto;
-}
-
 .ofertas p {
     padding-bottom: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.ofertas img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
 }
 
 .listaProductos {
@@ -255,24 +257,90 @@ header {
     padding-bottom: 4rem;
 }
 
-/* Media query para pantallas entre 376px y 768px */
-@media (min-width: 376px) and (max-width: 768px) {
+@media (max-width: 480px) {
     header {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .imagenLogo {
-        height: 60px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: 400px;
+        width: 100%;
+        text-align: center;
     }
 
     .busqueda {
-        width: 100%;
+        width: 90%;
+        margin-left: 0;
     }
 
     .acceso-directo {
+        flex-direction: column;
+        gap: 20px;
+        padding-right: 0;
+        align-items: center;
         justify-content: center;
-        padding-right: 2rem;
+    }
+
+    .ofertas {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main {
+        display: grid;
+        grid-template-areas: 
+            "acceso-directo"
+            "ofertas"
+            "filtros listaProductos";
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listaProductos {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .filtros {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: 400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .busqueda {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .acceso-directo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-right: 0;
     }
 
     .ofertas {
@@ -280,51 +348,110 @@ header {
         padding-right: 2rem;
     }
 
+    .main {
+        display: grid;
+        grid-template-areas: 
+            "acceso-directo acceso-directo acceso-directo"
+            "ofertas ofertas ofertas"
+            "filtros listaProductos listaProductos";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin: 0 auto;
+    }
+
     .listaProductos {
         grid-template-columns: repeat(2, 1fr);
-        padding-left: 2rem;
-        padding-right: 2rem;
+        gap: 15px;
+        justify-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 0;
+    }
+
+    .listaProductos figure {
+        width: 180px;
+        padding: 1rem;
     }
 
     .filtros {
         width: 100%;
         padding: 0 2rem;
     }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
-/* Media query para pantallas con un ancho mínimo de 768px */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     header {
-        padding-left: 8rem;
-        padding-right: 8rem;
-    }
-
-    .imagenLogo {
-        height: 80px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: 400px;
+        width: 100%;
+        text-align: center;
     }
 
     .busqueda {
-        width: 600px;
+        width: 70%;
+        max-width: 600px;
     }
 
     .acceso-directo {
-        justify-content: flex-end;
-        padding-right: 8rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-right: 0;
     }
 
     .ofertas {
-        padding-left: 8rem;
-        padding-right: 8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .main {
+        display: grid;
+        grid-template-areas: 
+            "acceso-directo acceso-directo acceso-directo acceso-directo"
+            "ofertas ofertas ofertas ofertas"
+            "filtros listaProductos listaProductos listaProductos";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 0 auto;
     }
 
     .listaProductos {
-        grid-template-columns: repeat(4, 1fr);
-        padding-left: 8rem;
-        padding-right: 8rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-right: 0;
+    }
+
+    .listaProductos figure {
+        width: 200px;
+        padding: 1rem;
     }
 
     .filtros {
-        width: 500px;
-        padding: 0 8rem;
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 }
